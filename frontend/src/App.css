@@ -1,0 +1,28 @@
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding-top: 50px;
+  color: white;
+}
+
+input, button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 8px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.toggle {
+  cursor: pointer;
+  color: #00bcd4;
+}
+
+.error {
+  color: red;
+}

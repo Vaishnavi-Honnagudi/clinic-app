@@ -1,0 +1,132 @@
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ===== AUTH PAGES ===== */
+.auth-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.auth-container h2 {
+  text-align: center;
+  color: #2c7be5;
+}
+
+.auth-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+  background: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.auth-container button:hover {
+  background: #1a5fd0;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.dashboard h2 {
+  color: #1a5fd0;
+  margin-bottom: 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card b {
+  font-size: 16px;
+}
+
+/* ===== STATUS COLORS ===== */
+.status-waiting {
+  color: orange;
+  font-weight: bold;
+}
+
+.status-called {
+  color: green;
+  font-weight: bold;
+}
+
+.status-completed {
+  color: gray;
+}
+
+/* ===== INPUTS ===== */
+.card input {
+  padding: 8px;
+  width: 60%;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+}
+
+.btn-call {
+  background: #28a745;
+}
+
+.btn-complete {
+  background: #17a2b8;
+}
+
+.btn-call:hover {
+  background: #218838;
+}
+
+.btn-complete:hover {
+  background: #138496;
+}
+
+/* ===== EMPTY MESSAGE ===== */
+.empty {
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+}
