@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: `${import.meta.env.VITE_API_URL}`,
 });
 
 export const registerUser = (data) =>
@@ -23,4 +23,3 @@ export const addMedicine = (id, medicine) =>
   API.put(`/appointments/medicine/${id}`, { medicine });
 
 export default API;
-
