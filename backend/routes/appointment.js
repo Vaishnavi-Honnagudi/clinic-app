@@ -49,6 +49,25 @@ router.get("/", async (req, res) => {
 
 /**
  * ===============================
+ * GET ALL COMPLETED APPOINTMENTS (Doctor's Consultation History)
+ * GET /appointments/completed
+ * ===============================
+ */
+router.get("/completed", async (req, res) => {
+  try {
+    const list = await Appointment.find({
+      status: "completed",
+    }).sort({ updatedAt: -1 }).limit(30);
+
+    res.json(list);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+
+/**
+ * ===============================
  * DOCTOR CALLS PATIENT
  * PUT /appointments/call/:id
  * ===============================
@@ -118,6 +137,26 @@ router.get("/patient/:patientId", async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
+
+/**
+ * ===============================
+ * PATIENT VIEWS APPOINTMENT HISTORY
+ * GET /appointments/patient/:patientId/history
+ * ===============================
+ */
+router.get("/patient/:patientId/history", async (req, res) => {
+  try {
+    const list = await Appointment.find({
+      patientId: req.params.patientId,
+      status: "completed",
+    }).sort({ updatedAt: -1 });
+
+    res.json(list);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 
 /**
  * ===============================
